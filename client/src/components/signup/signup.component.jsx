@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import FormInput from '../form/form.component';
+import Form from '../form/form.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { signUpStart } from '../../redux/user/user.actions';
@@ -41,7 +41,7 @@ const SignUp = ({ signUpStart }) => {
       <SignUpTitle>I do not have a account</SignUpTitle>
       <span>Sign up with your email and password</span>
       <form className='sign-up-form' onSubmit={handleSubmit}>
-        <FormInput
+        <Form
           type='text'
           name='displayName'
           value={displayName}
@@ -49,7 +49,7 @@ const SignUp = ({ signUpStart }) => {
           label='Display Name'
           required
         />
-        <FormInput
+        <Form
           type='email'
           name='email'
           value={email}
@@ -57,7 +57,7 @@ const SignUp = ({ signUpStart }) => {
           label='Email'
           required
         />
-        <FormInput
+        <Form
           type='password'
           name='password'
           value={password}
@@ -65,7 +65,7 @@ const SignUp = ({ signUpStart }) => {
           label='Password'
           required
         />
-        <FormInput
+        <Form
           type='password'
           name='confirmPassword'
           value={confirmPassword}

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
-import FormInput from '../form/form.component';
+import Form from '../form/form.component';
 import CustomButton from '../custom-button/custom-button.component';
 
 import { googleSignInStart, emailSignInStart } from '../../redux/user/user.actions';
@@ -34,7 +34,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
       <span>Sign in with your email and password</span>
 
       <form onSubmit={handleSubmit}>
-        <FormInput
+        <Form
           name='email'
           type='email'
           handleChange={handleChange}
@@ -42,7 +42,7 @@ const SignIn = ({ emailSignInStart, googleSignInStart }) => {
           label='email'
           required
         />
-        <FormInput
+        <Form
           name='password'
           type='password'
           value={password}
